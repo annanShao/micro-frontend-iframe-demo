@@ -1,0 +1,16 @@
+img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

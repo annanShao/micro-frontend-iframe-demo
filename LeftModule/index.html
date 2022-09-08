@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./style.css" />
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.38/vue.global.prod.min.js"
+  integrity="sha512-npQPwoPEoxzuLDSytF9RIdsHJd122lMGlUoLuQo2vCYtk6R1DEB03wIknFzHNQNHJKQlPjwcrEqflYWp417eVw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<div id="app">
+  <img src="../statics/vue.png" id="image" alt="" />
+  <button @click="handleSendTomCoin">Send Tom a coin</button>
+</div>
+<script type="module">
+  import eventEmitter from "../EventEmitter.js";
+  const { createApp } = Vue;
+  createApp({
+    methods: {
+      handleSendTomCoin() {
+        eventEmitter.emit("sendCoin");
+      },
+    },
+  }).mount("#app");
+</script>
