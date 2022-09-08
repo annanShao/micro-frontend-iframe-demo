@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  text-align: center;
+  margin: 0;
+}
+
+#left, #right{
+  width: 50%;
+  height: 100%;
+}

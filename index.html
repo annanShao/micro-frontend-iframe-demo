@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro iframe demo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <iframe src="./LeftModule/index.html" id="left" frameborder="0"></iframe>
+    <iframe src="./RightModule/index.html" id="right" frameborder="0"></iframe>
+    <script type="module">
+      const handleMessagePostToIframes = (event) => {
+        const {
+          data: { type },
+          source,
+        } = event;
+        document.querySelectorAll("iframe").forEach((iframe) => {
+          iframe.contentWindow.postMessage({ type });
+        });
+      };
+      window.addEventListener("message", handleMessagePostToIframes);
+    </script>
+  </body>
+</html>
