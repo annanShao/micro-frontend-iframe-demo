@@ -1,0 +1,16 @@
+#reactApp {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  background-color: lightslategrey;
+}
+
+img {
+  width: 200px;
+  margin-bottom: 20px;
+}
